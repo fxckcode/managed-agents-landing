@@ -92,5 +92,17 @@ details p { margin: .75rem 0 0; color: var(--muted); }
 .cta-section { background: var(--primary); color: #fff; text-align: center; }
 .cta-section a { color: #fff; }
 
+.demo-form { margin: 1.5rem auto 0; max-width: 420px; text-align: left; display: grid; gap: 1rem; }
+.field label { display: block; font-weight: 700; margin-bottom: .35rem; }
+.field input {
+  width: 100%; font: inherit; padding: .7rem .9rem; border-radius: 10px;
+  border: 2px solid var(--primary-soft); background: #fff; color: var(--text);
+}
+.field input[aria-invalid="true"] { border-color: #8C2A1A; }
+.field-error { color: #fff; background: #8C2A1A; border-radius: 8px; padding: .4rem .6rem; margin: .4rem 0 0; font-size: .95rem; }
+.demo-form .btn { justify-self: start; border: 0; font: inherit; cursor: pointer; }
+.demo-result { margin: 1.5rem auto 0; max-width: 520px; background: #fff; color: var(--text); border-radius: var(--radius); padding: 1.25rem 1.5rem; text-align: left; }
+.demo-result:focus { outline: 3px solid #fff; }
+
 .site-footer { padding-block: 2rem; font-size: .95rem; color: var(--muted); text-align: center; }
 .site-footer p { margin: 0; }
