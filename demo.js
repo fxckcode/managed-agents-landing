@@ -8,6 +8,12 @@
 
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+  function emptyOrInvalidEmailMessage(input) {
+    return input.value.trim() === ''
+      ? 'Escribe tu correo electrónico.'
+      : 'Revisa el formato del correo (por ejemplo, nombre@dominio.com).';
+  }
+
   var rules = {
     nombre: {
       validate: function (v) { return v.trim().length > 0; },
@@ -15,15 +21,9 @@
     },
     email: {
       validate: function (v) { return EMAIL_RE.test(v.trim()); },
-      message: v_empty_or_invalid
+      message: emptyOrInvalidEmailMessage
     }
   };
-
-  function v_empty_or_invalid(input) {
-    return input.value.trim() === ''
-      ? 'Escribe tu correo electrónico.'
-      : 'Revisa el formato del correo (por ejemplo, nombre@dominio.com).';
-  }
 
   function showError(input, message) {
     var errorEl = document.getElementById(input.id + '-error');
