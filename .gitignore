@@ -13,3 +13,8 @@ npm-debug.log*
 pnpm-debug.log*
 .env*.local
 *.tsbuildinfo
+
+# playwright
+test-results/
+playwright-report/
+blob-report/
