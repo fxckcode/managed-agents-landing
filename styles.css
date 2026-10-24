@@ -13,6 +13,9 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
+/* The UA stylesheet hides [hidden], but author rules such as display:grid override it. */
+[hidden] { display: none !important; }
+
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -36,6 +39,8 @@ p { margin: 0 0 1em; }
 
 a { color: var(--primary); }
 :focus-visible { outline: 3px solid var(--accent-dark); outline-offset: 3px; border-radius: 4px; }
+/* On the green CTA band the dark accent has too little contrast; use white focus rings there. */
+.cta-section :focus-visible { outline-color: #fff; }
 
 .container { width: min(1100px, 100% - 2.5rem); margin-inline: auto; }
 .narrow { width: min(720px, 100% - 2.5rem); }
