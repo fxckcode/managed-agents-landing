@@ -102,6 +102,24 @@
       <div class="container narrow">
         <h2 id="lista-titulo">Únete a la lista de espera</h2>
         <p>Pausa es un producto ficticio y esta página es una demostración. La lista de espera es simulada: no se envía ni se guarda ningún dato.</p>
+
+        <form class="demo-form" id="demo-form" novalidate>
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" autocomplete="given-name" required aria-describedby="nombre-error">
+            <p class="field-error" id="nombre-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+            <p class="field-error" id="email-error" hidden></p>
+          </div>
+          <button class="btn btn-cta" type="submit">Unirme a la lista (demo)</button>
+        </form>
+
+        <div class="demo-result" id="demo-result" role="status" hidden>
+          <p><strong>Esto es una demo.</strong> No hemos enviado ni guardado tus datos. Ninguna información se ha transmitido a ningún servicio.</p>
+        </div>
       </div>
     </section>
   </main>
@@ -111,5 +129,7 @@
       <p>Pausa es un producto ficticio creado como demostración. No es un servicio real.</p>
     </div>
   </footer>
+
+  <script src="demo.js" defer></script>
 </body>
 </html>
