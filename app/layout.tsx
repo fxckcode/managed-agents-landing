@@ -6,7 +6,11 @@ const TITLE =
 const DESCRIPTION =
   "Pausa es una app ficticia que te recuerda tomar descansos breves y te guía en pausas de 2 minutos durante tu jornada.";
 
+// Absolute URLs for og:image. Set SITE_URL to the public origin at deploy time.
+const SITE_URL = process.env.SITE_URL ?? process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: TITLE,
   description: DESCRIPTION,
   openGraph: {
@@ -16,7 +20,7 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
   },
