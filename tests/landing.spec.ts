@@ -13,7 +13,7 @@ test.describe("metadatos y estructura", () => {
     await expect(page.locator("html")).toHaveAttribute("lang", "es");
     await expect(page).toHaveTitle(/^Pausa — Micro-descansos guiados/);
     await expect(page.locator('meta[property="og:locale"]')).toHaveAttribute("content", "es_ES");
-    await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute("content", "summary");
+    await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute("content", "summary_large_image");
   });
 
   test("el skip link es el primer foco de teclado", async ({ page }) => {
